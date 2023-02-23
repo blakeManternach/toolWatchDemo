@@ -2,7 +2,9 @@
 This project includes a logging library that allows some basic configuration options.  I attempted to impliment it whithin the givin project structure. To see a running instance of the logger, you can run the TW.DeveloperTest.Console project. 
 
 # Configuration Options
+
 You can access and change configuration variables at any point by typing "c" in the console. Each of these options are also available whithin the constructor for the Logger class. 
+
 	1) Display Date Time - Decide whether the date/time is displayed with each log message. 
 	2) Display Logging Level - Decide whether the logging level is displayed before each log message.
 	3) Use Colors - Decide whether colors are displayed or not.  Colors are displayed per logging Level.
