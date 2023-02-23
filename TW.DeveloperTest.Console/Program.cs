@@ -37,7 +37,6 @@ namespace TW.DeveloperTest.ConsoleApp
                     // Setting a random logging level (excluding error) for demonstration purposes
                     Random rand = new Random();
                     var val = rand.Next(1, 4);
-
                     logger.LogMessage(result, (LoggingLevel)val);
                 }
                 catch (Exception e)

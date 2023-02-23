@@ -9,8 +9,9 @@ namespace TW.DeveloperTest.Contracts
 {
     public interface ILogger
     {
+        void DisplayInterface();
         void LogMessage(string message, LoggingLevel loggingLevel);
         void LogErrorMessage(string message);
-        void DisplayInterface();
+        // TODO: Impliment a unique method for each logging level that we wanted.  (E.g. LogWarningMessage, LogInfoMessage)
     }
 }

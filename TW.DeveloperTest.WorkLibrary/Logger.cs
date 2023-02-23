@@ -90,6 +90,7 @@ namespace TW.DeveloperTest.WorkLibrary
             LogMessage(message, LoggingLevel.ERROR);
         }
 
+        //  Generic Log Message that can be utilized by other internal methods here.  
         public void LogMessage(string message, LoggingLevel loggingLevel)
         {
             Console.ForegroundColor = UseColors ? LOGGING_LEVEL_COLOR_DICT[loggingLevel] : ConsoleColor.Gray;
