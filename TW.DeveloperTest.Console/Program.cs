@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using TW.DeveloperTest.Contracts;
+using TW.DeveloperTest.Contracts.Enums;
 
 namespace TW.DeveloperTest.ConsoleApp
 {
@@ -10,6 +11,7 @@ namespace TW.DeveloperTest.ConsoleApp
         {
             bool run = true;
             IWorker worker = Ioc.Resolve<IWorker>();
+            ILogger logger = Ioc.Resolve<ILogger>();
 
             do
             {
@@ -22,21 +24,27 @@ namespace TW.DeveloperTest.ConsoleApp
                     {
                         run = false;
                     }
+                    else if (key.Key == ConsoleKey.C)
+                    {
+                        logger.DisplayInterface();
+                    }
                 }
 
                 try
                 {
                     var result = worker.GetResult();
 
-                    //TODO replace with logging library
-                    Console.WriteLine($"output - {result}");
+                    // Setting a random logging level (excluding error) for demonstration purposes
+                    Random rand = new Random();
+                    var val = rand.Next(1, 4);
+
+                    logger.LogMessage(result, (LoggingLevel)val);
                 }
                 catch (Exception e)
                 {
-                    //TODO replace with logging library
-                    Console.WriteLine($"error - {e.Message}");
+                    logger.LogErrorMessage(e.Message);
                 }
-                
+
                 Thread.Sleep(500);
             } while (run);
         }
