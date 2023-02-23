@@ -1,3 +1,19 @@
+# Summary
+This project includes a logging library that allows some basic configuration options.  I attempted to impliment it whithin the givin project structure. To see a running instance of the logger, you can run the TW.DeveloperTest.Console project. 
+
+# Configuration Options
+You can access and change configuration variables at any point by typing "c" in the console. Each of these options are also available whithin the constructor for the Logger class. 
+	1) Display Date Time - Decide whether the date/time is displayed with each log message. 
+	2) Display Logging Level - Decide whether the logging level is displayed before each log message.
+	3) Use Colors - Decide whether colors are displayed or not.  Colors are displayed per logging Level.
+	4) Minimum Logging Level - This allows user to choose to only view logs equal or above a certain level.  This defaults to DEBUG.  
+
+# TODO and Other Notes
+	1) I spent a bit too long trying to get the .net sdk used for the existing projects downloaded.  At a certain point my computer wanted me to restart so I thought it'd be best to just upgrade each to .net 4.8 in the interest of my 2 hour time limit. I would not have made this choice in the workplace. 
+	2) Unfortunately did not have enough time to impliment a testing suite but this would be the next step before adding any more features at this point.
+	3) You'll see that you can pick a minimum logging level higher than what actually exists, thus displaying no logs.  This is not ideal but I had to leave in this bug in the interest of time. 
+	4) I'm not sure if this was the idea but going forward I'd probably want to move this to a "stand alone" library that is not intertwined with the other preexisting projects here.  I started by trying to utilize the existing Contracts and WorkLibrary projects but ultimately, the existing worker classes are not essential to the functioning of the logger and therefore probably wouldn't want to be shipped with the library. 
+
 # Welcome
 
 Included below are the instructions for the ToolWatch C# code exercise.  We're glad to have you here.  Good luck!
